@@ -46,4 +46,6 @@
     
 - (void) _ready:(CDVInvokedUrlCommand*)command;
 
+-(void)resizeWebView;
+
 @end

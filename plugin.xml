@@ -38,7 +38,6 @@
 
     <platform name="android">
         <source-file src="src/android/StatusBar.java" target-dir="src/org/apache/cordova/statusbar" />
-
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="StatusBar">
                 <param name="android-package" value="org.apache.cordova.statusbar.StatusBar" />
@@ -55,7 +54,6 @@
 
     <!-- ios -->
     <platform name="ios">
-
         <config-file target="config.xml" parent="/*">
             <feature name="StatusBar">
                 <param name="ios-package" value="CDVStatusBar" />
@@ -64,10 +62,10 @@
             <preference name="StatusBarOverlaysWebView" value="true" />
             <preference name="StatusBarStyle" value="lightcontent" />
         </config-file>
-
         <header-file src="src/ios/CDVStatusBar.h" />
         <source-file src="src/ios/CDVStatusBar.m" />
-
+        <header-file src="src/ios/MainViewController+Appear.h" />
+        <source-file src="src/ios/MainViewController+Appear.m" />
     </platform>
 
     <!-- wp7 -->
