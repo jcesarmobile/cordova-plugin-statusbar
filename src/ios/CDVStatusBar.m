@@ -90,7 +90,7 @@ static const void *kStatusBarStyle = &kStatusBarStyle;
     }
 }
 
--(void)cordovaViewWillAppear:(NSNotification*)notification
+-(void)cordovaViewDidAppear:(NSNotification*)notification
 {
     [self resizeWebView];
 }
@@ -117,7 +117,7 @@ static const void *kStatusBarStyle = &kStatusBarStyle;
 
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(statusBarDidChangeFrame:) name: UIApplicationDidChangeStatusBarFrameNotification object:nil];
 
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(cordovaViewWillAppear:) name: @"CDVViewWillAppearNotification" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(cordovaViewDidAppear:) name: @"CDVViewDidAppearNotification" object:nil];
 
     _statusBarOverlaysWebView = YES; // default
 
